@@ -69,8 +69,8 @@ def main_first(color_image):
 if __name__ == "__main__":
     color_image = cv2.imread(meta.getRootDir() + '/images/kafi.jpeg', cv2.IMREAD_COLOR)
     testResults = main_first(color_image)
-    # for i in range(len(testResults)):
-    #     if testResults[i] == 'hy' and i>0:
-    #         testResults[i] = testResults[i-1]
+    for i in range(len(testResults)):
+         if testResults[i] == 'hy' and i>0:
+             testResults[i] = testResults[i-1]
     print testResults
     part4.keyMapping(testResults,'kafi')
